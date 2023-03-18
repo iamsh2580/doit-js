@@ -1,9 +1,15 @@
-const title = document.querySelector("#title");
-const userName = document.querySelector("#desc p");
+// const title = document.querySelector("#title");
+// const userName = document.querySelector("#desc p");
 
-title.onclick = () => {
-  title.classList.toggle("clicked");  
-}
-userName.onclick = () => {
-  userName.classList.toggle("blue-italic");
+// title.onclick = () => {
+//   title.classList.toggle("clicked");  
+// }
+// userName.onclick = () => {
+//   userName.classList.toggle("blue-italic");
+// }
+
+const title=document.querySelectorAll("#title");
+
+title.onclick=()=>{
+  title.classList.toggle("bleu-italic");
 }
