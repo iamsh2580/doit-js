@@ -1,6 +1,13 @@
-const button = document.querySelector("button");
+// const button = document.querySelector("button");
 
-// 미리 .convert 스타일 만들어 놓고 토글하기
-button.addEventListener("click", function() {
+// // 미리 .convert 스타일 만들어 놓고 토글하기
+// button.addEventListener("click", function() {
+//   document.body.classList.toggle("convert");
+// });
+
+const button=document.querySelector("button");
+
+button.addEventListener("click",()=>{
   document.body.classList.toggle("convert");
 });
+
