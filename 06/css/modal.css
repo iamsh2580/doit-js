@@ -7,20 +7,21 @@ button {
 }
 
 #modal-box{
+  /* 모달 박스 위치 고정 */
   position: fixed;
   top:0;
-  left:0;
-  bottom:0;
+  left: 0;
   right: 0;
-
-  background-color: rgba(0,0,0,0.6);
-
-  display: none;
+  bottom: 0;
+  
+  background-color: rgba(0, 20, 0, 0.3);
+  /* 가운데 모달 박스 배치 */
+  
   justify-content: center;
   align-items: center;
+  display: none;
 }
-
-#modal-box .active{
+#modal-box.active{
   display: flex;
 }
 
