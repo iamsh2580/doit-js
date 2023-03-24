@@ -8,8 +8,8 @@ class Pet{
     }
 }
 
-//const dog=new Pet("buddle","ivory");
-//dog.run();
+const dog=new Pet("buddle","ivory");
+dog.run();
 
 class Cat extends Pet{
     constructor(name,color,breed){
