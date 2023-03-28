@@ -3,7 +3,7 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   let n = userNumber.value;
-  try {
+  try {ㅣ
     if (n === "" || isNaN(n)) {
       throw "숫자를 입력하세요.";
     }
