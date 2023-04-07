@@ -36,6 +36,12 @@
     // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     var map = new kakao.maps.Map(mapContainer, mapOption); 
 
+    var clusterer=new kakao.maps.MarkerClusterer({
+      map:map,
+      averagecenter:true,
+      minLevel:10
+    });
+
     var positions = [
       {
         title: '<div style="padding:5px;font-size:0.9rem;">이지스퍼블리싱</div>',
@@ -61,6 +67,19 @@
           map: map,
           position: positions[i].latlng
       });
+
+        //마커들을 모아 놓을 변수
+  var markers=[];
+
+    for(let i=0;i<positions.length;i++){
+      //마커 생성
+      var maker=new kakao.maps.markers({
+        map:map,
+        position:positions[i].latlng
+      });
+      markers.push(maker);
+    }
+
 
       var infowindow = new kakao.maps.InfoWindow( {
         content : positions[i].title   // 인포윈도우에 표시할 내용
@@ -89,6 +108,8 @@
             infowindow.close();
         };
     }
+    clusterer.addMarkers(markers);
+
   </script>
 </body>
 </html>

@@ -91,7 +91,7 @@ function manageTodo(e) {
   const whichButton = e.target.classList[0];  // 클릭한 부분의 class명 가져오기 
   if(whichButton === 'complete-button') {
     const todo = e.target.parentElement;
-    todo.children[0].classList.toggle('completed');  // 내용 부분에 .completed 클래스 토글
+    todo.children[0].toggle('completed');  // 내용 부분에 .completed 클래스 토글
   } else if(whichButton === 'delete-button') {
     const todo = e.target.parentElement;
     removeLocal(todo);
